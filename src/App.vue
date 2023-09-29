@@ -3,15 +3,19 @@
     <img alt="logo" src="./assets/logo.png" height="100" width="100">
     <h1>Gerenciador de Tarefas</h1>
   </div>
+  <UploadJson />
   <JobsAgrupador />
 </template>
 
 <script>
   import JobsAgrupador from './components/JobsAgrupador.vue'
+  import UploadJson from './components/UploadJson.vue';
 
   export default {
   components: {
-    JobsAgrupador, // Registre o componente para poder usá-lo no template
+    UploadJson,
+    JobsAgrupador,
+    // Registre o componente para poder usá-lo no template
   },
   // ...
 };
