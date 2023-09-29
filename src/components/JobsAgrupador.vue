@@ -1,4 +1,9 @@
-function calcularTempoEmHoras(tempoStr) {
+<template>
+  
+</template>
+
+<script>
+  function calcularTempoEmHoras(tempoStr) {
     // Converte uma string de tempo em horas
     const tempo = tempoStr.split(' ');
     const horas = parseInt(tempo[0]);
@@ -81,3 +86,32 @@ function calcularTempoEmHoras(tempoStr) {
     }
   }
   
+</script>
+
+<style scoped>
+.jobs-agrupador {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.conjuntos-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.conjunto {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.job-item {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+</style>
+
