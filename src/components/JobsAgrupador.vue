@@ -3,6 +3,17 @@
 </template>
 
 <script>
+
+// Importe o componente JobsAgrupador aqui
+import JobsAgrupador from "@/components/JobsAgrupador.vue";
+
+export default {
+  components: {
+    JobsAgrupador, // Registre o componente para poder usá-lo no template
+  },
+  // ...
+}
+
   function calcularTempoEmHoras(tempoStr) {
     // Converte uma string de tempo em horas
     const tempo = tempoStr.split(' ');
