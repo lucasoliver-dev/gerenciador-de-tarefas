@@ -15,7 +15,6 @@
   components: {
     UploadJson,
     JobsAgrupador,
-    // Registre o componente para poder usá-lo no template
   },
   // ...
 };

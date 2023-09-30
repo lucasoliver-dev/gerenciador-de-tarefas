@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h2>Upload de Arquivo JSON</h2>
-    <input type="file" @change="handleFileUpload" accept=".json" />
-    <button @click="uploadFile">Enviar</button>
+    <input class="" type="file" @change="handleFileUpload" accept=".json" />
+    <button class="btn" @click="uploadFile">Enviar</button>
 
     <div v-if="jsonData">
       <h2>Dados do JSON:</h2>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import api from '@/api'; // Importe o Axios configurado
+import api from '@/api'; // Importando o Axios configurado
 
 export default {
   data() {
@@ -56,5 +56,23 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos personalizados aqui */
+  /* Estilização para a classe .btn */
+.btn {
+  margin: 1rem;
+  display: inline-block;
+  padding: 10px 20px; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Estilização para o botão quando o mouse passa por cima */
+.btn:hover {
+  background-color: #0056b3;
+}
 </style>

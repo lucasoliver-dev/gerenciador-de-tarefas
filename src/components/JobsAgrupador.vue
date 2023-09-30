@@ -82,7 +82,7 @@ export default {
     },
   },
   created() {
-    // Exemplo de uso com o JSON fornecido
+    // Exemplo de uso com o JSON
     const jobs = [
       {
         ID: 1,

@@ -3,16 +3,16 @@ const cors = require('cors');
 const multer = require('multer');
 const app = express();
 
-app.use(cors()); // Configurar CORS para permitir todas as origens (não recomendado para produção)
+app.use(cors()); //CORS para permitir todas as origens 
 app.use(express.json());
 
-// Configurar o multer para lidar com o upload de arquivos
+//multer para lidar com o upload de arquivos
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-// Defina um endpoint para o upload do arquivo JSON
+//endpoint para o upload do arquivo JSON
 app.post('/upload', upload.single('jsonFile'), (req, res) => {
-  // Verifique se um arquivo foi enviado
+  // Verificando se um arquivo foi enviado
   if (!req.file) {
     return res.status(400).json({ message: 'Nenhum arquivo enviado.' });
   }
@@ -20,11 +20,11 @@ app.post('/upload', upload.single('jsonFile'), (req, res) => {
   // O conteúdo do arquivo está disponível em req.file.buffer como um buffer
   const fileBuffer = req.file.buffer;
 
-  // Converta o buffer em uma string JSON (assumindo que o arquivo é JSON)
+  // Convertendo buffer em uma string JSON (assumindo que o arquivo é JSON)
   const jsonString = fileBuffer.toString('utf8');
 
   try {
-    // Faça o parse da string JSON em um objeto JavaScript
+    //parse da string JSON em um objeto JavaScript
     const jsonData = JSON.parse(jsonString);
 
     // Agora você pode fazer o que quiser com os dados JSON
