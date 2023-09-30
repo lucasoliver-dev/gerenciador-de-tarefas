@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
@@ -12,12 +11,8 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 // Defina um endpoint para o upload do arquivo JSON
-// Exemplo de uso para fazer uma solicitação POST
-
-import api from './services/api';
-
-api.post('/upload', formData).then(response => {
-  // Lógica para lidar com a resposta do servidor
+app.post('/upload', upload.single('jsonFile'), (req, res) => {
+  // Verifique se um arquivo foi enviado
   if (!req.file) {
     return res.status(400).json({ message: 'Nenhum arquivo enviado.' });
   }
